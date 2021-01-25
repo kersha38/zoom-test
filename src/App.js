@@ -6,6 +6,7 @@ import $ from 'jquery';
 function App() {
   useEffect(() => {
     var multiplier = 1;
+    console.log(multiplier);
     $('#image').removeClass().addClass('zoom1');
     var imageWidth =  $('#image').width();
     var imageHeight =  $('#image').height();
