@@ -5,8 +5,6 @@ import $ from 'jquery';
 
 function App() {
   useEffect(() => {
-    var multiplier = 1;
-    console.log(multiplier);
     $('#image').removeClass().addClass('zoom1');
     var imageWidth =  $('#image').width();
     var imageHeight =  $('#image').height();
@@ -28,28 +26,25 @@ function App() {
         });
     }
     $('#zoom1').on('click', function(){
-        multiplier = 1;
         $('#image').removeClass().addClass('zoom1');
         imageWidth =  $('#image').width();
         imageHeight =  $('#image').height();
         createPoints(imageHeight, imageWidth);
     });
     $('#zoom2').on('click', function(){
-        multiplier = 1.5;
         $('#image').removeClass().addClass('zoom2');
         imageWidth =  $('#image').width();
         imageHeight =  $('#image').height();
         createPoints(imageHeight, imageWidth);
     });
     $('#zoom3').on('click', function(){
-        multiplier = 2;
         $('#image').removeClass().addClass('zoom3');
         imageWidth =  $('#image').width();
         imageHeight =  $('#image').height();
         createPoints(imageHeight, imageWidth);
     });
-    createPoints(imageHeight, imageWidth);
-  }, []);
+    createPoints(337.35, 600);
+  });
   return (
     <>
       <div className="zoom-comtroler">
